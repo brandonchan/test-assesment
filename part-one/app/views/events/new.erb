@@ -1,0 +1,17 @@
+<div class="container">
+  <% if @event && @event.errors %>
+  <ul>
+    <% @event.errors.each do |attr, msg| %>
+      <li><%= attr %> <%= msg %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <form action="/events" method="post">
+    <input type="text" name="name" value="" placeholder="Title">
+    <input type="text" name="location" value="" placeholder="Location">
+    <input type="text" name="starts_at" value="2015-04-20 18:37:40" >
+    <input type="text" name="ends_at" value="2015-04-20 20:37:40" >
+    <input type="submit" value="create event">
+  </form>
+</div>

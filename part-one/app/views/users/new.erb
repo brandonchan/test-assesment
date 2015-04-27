@@ -1,0 +1,18 @@
+<div class="container">
+  <% if @user && @user.errors %>
+  <ul>
+    <% @user.errors.each do |attr, msg| %>
+      <li><%= attr %> <%= msg %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <form action="/users" method="post">
+    <input type="text" name="user[first_name]" value="" placeholder="First Name">
+    <input type="text" name="user[last_name]" value="" placeholder="Last Name">
+    <input type="text" name="user[email]" value="" placeholder="Email">
+    <label>Birthday:</label><input type="date" name="user[birthdate]" value="">
+    <input type="password" name="user[password]" value="" placeholder="Password">
+    <input type="submit" value="Register">
+  </form>
+</div>

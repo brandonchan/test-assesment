@@ -1,0 +1,13 @@
+<form action="/events/<%= @event.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+    <input type="text" name="name" value="<%= @event.name %>" placeholder="Title">
+    <input type="text" name="location" value="<%= @event.location %>" placeholder="Location">
+    <input type="text" name="starts_at" value="2015-04-20 18:37:40" >
+    <input type="text" name="ends_at" value="2015-04-20 20:37:40" >
+    <input type="submit" value="update event">
+</form>
+
+<form action="/events/<%= @event.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="delete event">
+</form>
